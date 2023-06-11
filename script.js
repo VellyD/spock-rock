@@ -37,6 +37,17 @@ function resetAllIcons() {
   });
 }
 
+function resetAll() {
+  playerScoreNumber = 0;
+  computerScoreNumber = 0;
+  playerScoreEl.textContent = playerScoreNumber;
+  computerScoreEl.textContent = computerScoreNumber;
+  playerChoiceEl.textContent = "";
+  computerChoiceEl.textContent = "";
+  resultText.textContent = "";
+  resetAllIcons();
+}
+
 function computerRandomChoice() {
   const computerChoiceNumber = Math.random();
 
@@ -132,3 +143,5 @@ function select(playersChoice) {
       break;
   }
 }
+
+resetAll();
