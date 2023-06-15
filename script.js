@@ -1,7 +1,3 @@
-import JSConfetti from "js-confetti";
-
-const jsConfetti = new JSConfetti();
-
 const playerScoreEl = document.getElementById("playerScore");
 const playerChoiceEl = document.getElementById("playerChoice");
 const computerScoreEl = document.getElementById("computerScore");
@@ -77,7 +73,6 @@ function updateScore(playersChoice) {
     const choice = choices[playersChoice];
 
     if (choice.defeats.indexOf(computerChoice) > -1) {
-      jsConfetti.addConfetti();
       // startConfetti();
       resultText.textContent = "You Won!";
       playerScoreNumber++;
